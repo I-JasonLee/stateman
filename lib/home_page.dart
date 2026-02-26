@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:stateman/counter_model.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key, required this.title});
@@ -7,11 +9,12 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Builder(
-      builder: (context) {
+    return Consumer<CounterModel>(
+      builder: (context, value, child) {
         return Scaffold(
           appBar: AppBar(
-
+            backgroundColor: Theme.of(context),
+            title: Text(Widget.title),
           ),
         )
       }
