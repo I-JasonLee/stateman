@@ -24,19 +24,15 @@ class MyHomePage extends StatelessWidget {
             .headlineMedium,
             ),
           ),
-        )
-      }
-    )    // return Scaffold(
-    //   appBar: AppBar(
-    //     title: Text(title),
-    //     backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-    //   ),
-    //   body: const Center(
-    //     child: Text(
-    //       'Welcome to My App',
-    //       style: TextStyle(fontSize: 20),
-    //     ),
-    //   ),
-    // );
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              value.increment();
+            },
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          ),
+        );
+      },
+    );
   }
 }
