@@ -7,17 +7,26 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: const Center(
-        child: Text(
-          'Welcome to My App',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
+    return Builder(
+      builder: (context) {
+        return Scaffold(
+          appBar: AppBar(
+
+          ),
+        )
+      }
+    )
+    // return Scaffold(
+    //   appBar: AppBar(
+    //     title: Text(title),
+    //     backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+    //   ),
+    //   body: const Center(
+    //     child: Text(
+    //       'Welcome to My App',
+    //       style: TextStyle(fontSize: 20),
+    //     ),
+    //   ),
+    // );
   }
 }
