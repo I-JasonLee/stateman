@@ -18,18 +18,32 @@ class MyHomePage extends StatelessWidget {
             title: Text(title),
           ),
           body: Center(
-            child: Text(value.angka.toString(),
-            style: Theme.of(context)
-            .textTheme
-            .headlineMedium,
+            child: Text(
+              value.angka.toString(),
+              style: Theme.of(context)
+                .textTheme
+                .headlineMedium,
             ),
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {
-              value.increment();
-            },
-            tooltip: 'Increment',
-            child: const Icon(Icons.add),
+          floatingActionButton: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              FloatingActionButton(
+                onPressed: () {
+                  value.decrement();
+                },
+                tooltip: 'Decrement',
+                child: const Icon(Icons.remove),
+              ),
+              const SizedBox(width: 10),
+              FloatingActionButton(
+                onPressed: () {
+                  value.increment();
+                },
+                tooltip: 'Increment',
+                child: const Icon(Icons.add),
+              ),
+            ],
           ),
         );
       },
