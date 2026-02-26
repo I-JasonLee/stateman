@@ -29,7 +29,7 @@ class MyHomePage extends StatelessWidget {
               value.increment();
             },
             tooltip: 'Increment',
-            child: const Icon(Icons.add)
+            child: const Icon(Icons.add),
           ),
         );
       },
