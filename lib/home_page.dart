@@ -13,13 +13,20 @@ class MyHomePage extends StatelessWidget {
       builder: (context, value, child) {
         return Scaffold(
           appBar: AppBar(
-            backgroundColor: Theme.of(context),
-            title: Text(Widget.title),
+            backgroundColor:
+              Theme.of(context).colorScheme.inversePrimary,
+            title: Text(title),
+          ),
+          body: Center(
+            child: Text(value.angka.toString(),
+            style: Theme.of(context)
+            .textTheme
+            .headlineMedium,
+            ),
           ),
         )
       }
-    )
-    // return Scaffold(
+    )    // return Scaffold(
     //   appBar: AppBar(
     //     title: Text(title),
     //     backgroundColor: Theme.of(context).colorScheme.inversePrimary,
